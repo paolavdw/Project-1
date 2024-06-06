@@ -7,3 +7,4 @@ Group-3 Member:
 3. Sadaf <br>
 4. Lucia reyes
 5. Paola VdW
+6. Roger 
