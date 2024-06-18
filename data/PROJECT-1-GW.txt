@@ -1,0 +1,46 @@
+<<<<<<< HEAD
+#import dependencies
+import pandas as pd
+import matplotlib as plt
+import numpy as np
+import scipy as sc
+from pathlib import Path 
+
+#import dataset from csv file
+file = Path(r'C:\Users\lyons\Downloads\PhysicalActivityObesity.csv')
+data_df = pd.read_csv(file)
+
+#preview of dataframe
+#data_df.head()
+#Only need Location, Age and Question columns
+data_df = data_df[['LocationAbbr','Age(years)', 'Question']]
+
+#Filter on Question == "Percent of adults who engage in no leisure-time physical activity"
+filtered_data_df = data_df.query('Question == "Percent of adults who engage in no leisure-time physical activity"')
+
+#Count total observations by variable 'Age(years)' and 'Location'
+group_df = filtered_data_df.groupby(by=['LocationAbbr','Age(years)']).count()
+=======
+#import dependencies
+import pandas as pd
+import matplotlib as plt
+import numpy as np
+import scipy as sc
+from pathlib import Path 
+
+#import dataset from csv file
+file = Path(r'C:\Users\lyons\Downloads\PhysicalActivityObesity.csv')
+data_df = pd.read_csv(file)
+
+#preview of dataframe
+#data_df.head()
+#Only need Location, Age and Question columns
+data_df = data_df[['LocationAbbr','Age(years)', 'Question']]
+
+#Filter on Question == "Percent of adults who engage in no leisure-time physical activity"
+filtered_data_df = data_df.query('Question == "Percent of adults who engage in no leisure-time physical activity"')
+
+#Count total observations by variable 'Age(years)' and 'Location'
+group_df = filtered_data_df.groupby(by=['LocationAbbr','Age(years)']).count()
+>>>>>>> sadaf
+group_df.head(50)
